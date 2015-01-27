@@ -3,8 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <title>Test task</title>
-  <link rel="stylesheet" media="screen" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
   <style type="text/css">
+    .group {
+      display: table; /* streaching container width to wrap all content  */
+    }
+
+    .group.active {
+      outline: 2px solid green;
+    }
+    
+    .row {
+      white-space: nowrap;
+    }
+    
     .square {
       display: inline-block;
       margin: 20px;
@@ -12,18 +23,44 @@
       height: 100px;
       background-color: #FF9900;
     }
-    .group.active {
-      outline: 2px solid green;
+    
+    .square.active {
+     background-color: blue; 
+    }
+
+    .empty-row {
+      display: inline-block;
+      margin: 20px;
+      height: 100px;
+      width: 100px;
+      background-color: gray;
+      color: #FF9900;
+      line-height: 100px;
+      text-align: center;
+    }
+
+    .empty-row.active {
+      outline: 2px solid blue;
+    }
+
+    .empty-group {
+      display: inline-block;
+      margin: 20px;
+      height: 100px;
+      width: 100px;
+      background-color: gray;
+      color: #FF9900;
+      line-height: 100px;
+      text-align: center;
+    }
+    
+    button {
+      margin: 10px;
     }
   </style>
   
 </head>
 <body>
-<header class="navbar navbar-default navbar-static-top">
-  <div class="container">
-    <span class="navbar-brand">Test task</span>
-  </div>
-</header>
 <div id="app" class="container"></div>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>

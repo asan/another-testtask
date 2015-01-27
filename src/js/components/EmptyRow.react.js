@@ -1,14 +1,14 @@
 var React = require('react/addons');
 var cx = React.addons.classSet;
 
-var Square =
+var EmptyRow =
   React.createClass({
     render:function(){
       var classes = cx({
-        'square': true,
+        'empty-row': true,
         'active': this.props.active
       });
-      return <div className={classes}></div>
+      return <div className={classes}>Empty row</div>
     }
   });
-module.exports = Square;
+module.exports = EmptyRow;
